@@ -232,9 +232,6 @@ nav {
   object-fit: contain;
   
 }
-.png2-placeholder img{
-  display:block;
-}
 
 
 .details {
@@ -520,6 +517,7 @@ border-radius: 10px;
 
 
 @media (max-width: 480px) {
+  
   .cursor {
     display: none;
   }
@@ -586,6 +584,10 @@ border-radius: 10px;
  
     position: relative;
   }
+  .png2-placeholder img{
+  display:block;
+}
+
   .png2-placeholder img{
     position: absolute;
     top: -12%;
