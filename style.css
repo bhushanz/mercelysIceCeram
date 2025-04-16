@@ -209,6 +209,8 @@ nav {
   height: 26vh;
   width: 14vw;
 }
+.png2-placeholder img{
+  display:none;
 .png2 {
   position: absolute;
   z-index: 99;
