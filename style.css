@@ -788,7 +788,7 @@ display: block;
 }
 
 
-@media (max-width: 330px){
+@media (max-width: 365px){
 
   .logo{
   }
@@ -801,7 +801,7 @@ display: block;
 }
 
   .hero-heading{
-    margin-top: 40%;
+    margin-top: 50%;
   }
   .reelShow{
     height: auto;
