@@ -211,6 +211,7 @@ nav {
 }
 .png2-placeholder img{
   display:none;
+}
 .png2 {
   position: absolute;
   z-index: 99;
