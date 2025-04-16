@@ -1,0 +1,754 @@
+@font-face {
+  font-family: bold-regular;
+  src: url(fonts2/Hanson-Bold.ttf);
+}
+@font-face {
+  font-family: regular;
+  src: url(fonts2/MoniqaParagraphBold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #3f0e67;
+  position: relative;
+  cursor: none;
+  font-family: bold-regular;
+
+}
+
+.cursor {
+  position: absolute;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  position: fixed;
+  top: 20px;
+  left: -10px;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 999;
+  transform: translate(50%, -50%);
+}
+.cursor img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+nav {
+  width: 100%;
+  padding: 2vh 12vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  transform: translateY(-120px);
+  z-index: 99;
+
+}
+.logo {
+  z-index: 2;
+}
+.logo img {
+  height: 15vh;
+  font-weight: 15vh;
+}
+
+.hamburger {
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #572a7c;
+  z-index: 2;
+  border: 1px solid rgb(254, 253, 253);
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2.5px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+}
+.menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0vh;
+  background-color: #3f0e67;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.menu-imgs,
+.menu-list {
+  width: 50%;
+  height: 90%;
+}
+.menu-list {
+  padding: 5vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-list ul li {
+  list-style: none;
+  text-align: center;
+  font-family: bold-regular;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 1vh;
+  
+}
+.menu-list ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 3vw;
+  text-align: center;
+}
+.menu-list ul li:hover {
+  scale: 1.5;
+}
+.menu-list ul li a:hover {
+  color: rgb(249, 248, 212);
+}
+
+/* hero page starts here */
+.hero {
+  height: 100vh;
+  width: 100%;
+  padding-top: 6%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f0e67;
+  font-size: 6vw;
+  position: relative;
+  background-image: url('https://img.freepik.com/free-photo/ice-cream-concept-with-copyspace-left_23-2147811038.jpg?t=st=1744524671~exp=1744528271~hmac=818412574c669c5a05a21380bba94adedf965ab043ba847a43d524448092812a&w=1380');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.hero-heading {
+  width: 80%;
+  margin: auto;
+  font-family: bold-regular;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  word-spacing: 4px;
+ 
+
+}
+.hero-heading .spandiv {
+  overflow: hidden;
+  margin: auto;
+  width: 80%;
+}
+
+.hero-heading .spandiv span {
+  display: inline-block;
+  transform: translateY(100px);
+  opacity: 0;
+  line-height: 1;
+
+  transition: transform 0.3s ease, color 0s ease;
+}
+
+
+.cream {
+  color: rgb(250, 40, 187);
+}
+.spandiv span:hover {
+  color: rgb(250, 40, 187);
+  -webkit-text-stroke: 2px#ece8f0;
+}
+.cone-png {
+  position: absolute;
+  opacity: 0;
+  scale: 0;
+}
+/* .png1 img {
+  filter: drop-shadow(5px 4px 5px rgb(48, 48, 48));
+} */
+/* .png1 {
+  height: 45vh;
+  top: 30%;
+  left: 0vw;
+  transform: rotate(-38deg);
+  z-index: 1;
+  animation: scale 3s 1s ease-in-out infinite;
+  display: none;
+} */
+.cone-png img {
+  height: 100%;
+  width: 100%;
+}
+
+.unic {
+  display: inline-block;
+  display: flex;
+
+}
+.png2-placeholder {
+  height: 26vh;
+  width: 14vw;
+}
+.png2 {
+  position: absolute;
+  z-index: 99;
+  height: 25%;
+  width: 10%;
+ bottom: -15%;
+  left: 38%;
+  scale: 1;
+  filter: drop-shadow(5px 4px 5px rgb(48, 48, 48));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.png2 img {
+  height: 100%;
+  object-fit: contain;
+  
+}
+
+
+.details {
+  height: 100vh;
+  width: 100%;
+  will-change: background-color;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #3f0e67;
+  color: #3f0e67;
+  padding: 1vh 15vw;
+
+}
+.details-head {
+  margin-top: 10vh;
+}
+.details-head h1 span {
+  color: rgb(220, 15, 159);
+}
+.details-head {
+  font-size: 2vw;
+}
+.details-para {
+  margin-top: 2vw;
+ 
+}
+.details-para .para {
+  color: #3f0e67;
+  font-weight: 400;
+}
+.para span {
+  display: inline-block;
+  font-size: 1.9vw;
+  font-weight: 400;
+  line-height: 2.7vw;
+}
+
+.marque{
+  width: 100%;
+height: 10vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.innerdiv{
+  position: absolute;
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+
+
+}
+.text{
+  display: flex;
+  align-items: center;
+ white-space: nowrap;
+ color: #3f0e67;
+  object-fit: contain;
+  object-position: center;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  padding: 0vw 1vw;
+  background-image: linear-gradient(34deg, rgb(111, 255, 0) , rgb(251, 255, 0));
+  border: 2px solid rgb(85, 0, 190);
+ 
+
+}
+.text img{
+ padding-top: 10px;
+  width: 8%;   /* or any size you prefer */
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+
+}
+.cone{
+  display: none;
+}
+
+
+.reelShow{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+ flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.reelContainer{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 5vw;
+position: relative;
+right: -75%;
+
+}
+.reel{
+transform: rotate(10deg);
+height: 90%;
+ width: 15vw; /* use vw for responsive width */
+  min-width: 300px; /* optional: ensures cards don’t shrink too much */
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  right:0%;
+  /* border: 3px solid rgb(96, 32, 156); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+.reel video{
+transition: all 0.2s linear ;
+  scale: 1;
+}
+.reel video source{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+ 
+}
+.reel video:hover{
+
+  scale: 1.1;
+}
+.reel-heading{
+  width: 70%;
+display: flex;
+flex-wrap: wrap;
+  position: absolute;
+  left: 5%;
+  z-index: -1;
+}
+.reel-heading h1{
+  font-size: 4vw;
+  color: whitesmoke;
+
+
+}
+.reel-heading h1 span{
+  color: rgb(220, 15, 159);
+}
+
+.sound{
+  height: 40px ;
+  width: 40px;
+  position: absolute;
+  z-index: 5;
+  bottom: 20px;
+  right: 15px;
+  background-color: rgba(171, 171, 171, 0.773);
+  border-radius: 50%;
+  border: none;
+  cursor: none;
+}
+.sound i{
+  font-size: 2vw;
+  color: rgba(255, 255, 255, 0.561);
+  cursor: none;
+}
+.contact{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+background-color: #eeeeee;
+  
+}
+
+.row1{
+  height: 90%;
+  width: 80%;
+  padding: 0vw 35px;
+}
+.menu-list2{
+  display: flex;
+}
+
+.menu-list2 ul{
+  display: flex;
+  gap:30px;
+  flex-wrap: wrap;
+  
+ 
+}
+.menu-list2 ul li{
+  list-style: none;
+  position: relative;
+  
+ 
+}
+.menu-list2 ul li::after{
+  position: absolute;
+  right: -20px;
+  content: " ";
+  height: 18px;
+  border: 2px solid rgb(37, 37, 37);
+}
+.menu-list2 ul li a{
+  text-decoration: none;
+  color: rgb(72, 3, 121);
+  text-transform: capitalize;
+}
+
+.row1 h1{
+  color: #3f0e67;
+  width: 60%;
+}
+
+.row2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputdiv{
+  width: 60%;
+  display: flex;
+  margin-top: 20px;
+  
+}
+.inputdiv input{
+  border: 2px solid red;
+  width: 60%;
+  padding: 10px 20px;
+  border: none;
+border-radius: 10px;
+color: #3f0e67;
+}
+.inputdiv button{
+  width: 25%;
+background-color:  #3f0e67;
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 10px;
+
+}
+
+.para{
+
+  line-height: 2.5;
+  }
+
+
+.mediaLink{
+  padding: 2vw 0vw;
+    height: auto;
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+  }
+  .mediaLink i{
+    font-size: 2vw;
+    color: #3f0e67;
+  }
+
+  .inputdiv{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+  }
+  .inputdiv input{
+    width: 100%;
+  }
+  .paraend{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+@media (max-width: 480px) {
+  .cursor {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    padding: 0vh 5vh;
+    align-items: center;
+  }
+.hamburger{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+}
+  .logo img,
+  .hamburger img {
+    height: 15vh;
+  }
+  .menu-list {
+    width: 100%;
+  }
+  .menu-list ul li {
+    margin: 10px;
+  }
+  .menu-list ul li a {
+    font-size: 4vw;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+  .hero-heading {
+    width: 85%;
+    margin: auto;
+    margin-top: 20%;
+    font-family: bold-regular;
+    text-align: start;
+    color: #e7e5e8;
+    z-index: 2;
+    word-spacing: 0px;
+    position: relative;
+  }
+  .hero-heading .spandiv {
+    font-size: 8vw;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .png1 {
+    display: none;
+  }
+  .png2-placeholder{
+    height: 80px;
+    width: 80px;
+  }
+  .png2 {
+    height: 60px;
+    width: 60px;
+    position:absolute;
+    top: 62%;
+    left:22%;
+  
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .png2 img {
+    height: 90px;
+  }
+
+
+  .details{
+    background-color: whitesmoke;
+    padding: 1vh 10vw;
+    height: 70vh;
+  }
+  .details-head {
+    position: relative;
+  }
+  .details-head h1{
+ font-size: 5vw;
+  }
+  .details-para{
+    margin-top: 10%;
+  }
+  .details-para .para span{
+    font-size: 2.5vw;
+    line-height: 2;
+ 
+  }
+  .cone{
+    height: 70px;
+    width: 30%;
+    object-fit:contain ;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    transform: rotate(10deg);
+  }
+  .cone img{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .marque >.innerdiv{
+    gap:2px
+  }
+  
+  .marque >.innerdiv .text{
+ border: none;
+
+  }
+
+
+  /* rell section */
+
+.reelShow{
+  height: auto;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+  .reel-heading{
+    position: relative;
+    width: 90%;
+    margin-bottom: 20px;
+ 
+
+  }
+  .reel-heading h1{
+    font-size: 5vw;
+  }
+  .reelContainer{
+    padding: 0vh 0vh;
+    height: 100vh;
+   width: 100%;
+    overflow-y: scroll; 
+    position: relative;
+    top: 0;
+     left: 0%;
+    scroll-snap-type: y mandatory; /* 👈 adds snapping effect */
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    gap: 20px;
+    -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+  }
+  .reelContainer .reel{
+    padding: 0vh 0vh;
+    height: 90vh; /* 👈 each reel takes full screen */
+    width: 100%; 
+    margin: auto;
+    scroll-snap-align: start; /* 🔥 this makes it snap to top */
+    transform: rotate(0);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    left: 0;
+    scale: 1;
+
+
+  }
+
+  .reelContainer .reel video {
+    overflow: hidden;
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 20px; /* Remove any rounded corners */
+  }
+  .reelContainer .reel video:hover{
+    scale: 1;
+  }
+  .sound{
+    right: 30px;
+  }
+  .sound i{
+    font-size: 6vw;
+  }
+
+
+  .contact{
+min-height: 80vh;
+
+display: block;
+
+   
+  }
+  .row1 >.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom:  10px;
+  }
+  .contact .row1{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+   
+  }
+
+  .row1  .menu-list2{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+
+   
+  }
+   .menu-list2 ul li a{
+   font-size: 3vw;
+  }
+  .mediaLink{
+  padding: 8vw 0vw;
+    height: 10vw;
+    display: flex;
+    gap: 10vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .mediaLink i{
+    font-size: 5vw;
+    color: #3f0e67;
+  }
+
+  .inputdiv{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .para{
+    color: #e7e5e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
+  }
+}
