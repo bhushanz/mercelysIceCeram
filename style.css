@@ -372,6 +372,9 @@ flex-wrap: wrap;
 
 
 }
+.reel-heading p{
+  color: whitesmoke;
+}
 .reel-heading h1 span{
   color: rgb(220, 15, 159);
 }
@@ -636,7 +639,7 @@ display: none;
 
 .reelShow{
   height: auto;
-  width: 95%;
+  width: 95vw;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -659,9 +662,10 @@ display: none;
     color: whitesmoke;
   }
   .reelContainer{
+    
     padding: 0vh 0vh;
-    height: 75vh;
-   width: 70%;
+    height: 60vh;
+   width: 80vw;
    overflow: hidden;
     overflow-y: scroll; 
     position: relative;
@@ -676,8 +680,8 @@ display: none;
   }
   .reelContainer .reel{
     padding: 1vh 0vh;
-    height: 100%; /* 👈 each reel takes full screen */
-    width: 75%; 
+    height: 90%; /* 👈 each reel takes full screen */
+    width: 70vw; 
     scroll-snap-align: start; /* 🔥 this makes it snap to top */
     transform: rotate(0);
     position: relative;
@@ -686,9 +690,7 @@ display: none;
     position: relative;
     left: 0;
     scale: 1;
-
-
-
+  
   }
 
   .reelContainer .reel video {
@@ -811,7 +813,7 @@ display: block;
       font-size: 5.5vw;
     }
     .reelContainer{
-   
+ 
       padding: 0vh 0vh;
       height: 75vh;
      width: 80%;
