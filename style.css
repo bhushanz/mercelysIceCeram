@@ -232,6 +232,9 @@ nav {
   object-fit: contain;
   
 }
+.png2-placeholder img{
+  display:block;
+}
 
 
 .details {
