@@ -404,7 +404,7 @@ background-color: #eeeeee;
   
 }
 
-.row1{
+.row1,.row2{
   height: 90%;
   width: 80%;
   padding: 0vw 35px;
@@ -458,7 +458,6 @@ background-color: #eeeeee;
   
 }
 .inputdiv input{
-  border: 2px solid red;
   width: 60%;
   padding: 10px 20px;
   border: none;
@@ -523,9 +522,15 @@ border-radius: 10px;
   justify-content: center;
   width: 55px;
 }
-  .logo img,
+.logo{
+  margin-top: 4px;
+}
+.logo img{
+  height: 13vh;
+}
+
   .hamburger img {
-    height: 15vh;
+ 
   }
   .menu-list {
     width: 100%;
@@ -539,16 +544,18 @@ border-radius: 10px;
 
   .hero {
     height: 70vh;
+    display: block;
   }
   .hero-heading {
-    width: 85%;
+ 
+    width: 90%;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 30%;
     font-family: bold-regular;
     text-align: start;
     color: #e7e5e8;
     z-index: 2;
-    word-spacing: 0px;
+    word-spacing: 1px;
     position: relative;
   }
   .hero-heading .spandiv {
@@ -563,18 +570,19 @@ border-radius: 10px;
   .png2-placeholder{
     height: 80px;
     width: 80px;
-  }
-  .png2 {
-    height: 60px;
-    width: 60px;
-    position:absolute;
-    top: 62%;
-    left:22%;
-  
     object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ 
+    position: relative;
+  }
+  .png2-placeholder img{
+    position: absolute;
+    top: -12%;
+ height: 100%;
+ width: 100%;
+  }
+
+  .png2 {
+display: none;
 
   }
   .png2 img {
@@ -584,36 +592,35 @@ border-radius: 10px;
 
   .details{
     background-color: whitesmoke;
-    padding: 1vh 10vw;
+    padding: 1vh 5vw;
     height: 70vh;
   }
   .details-head {
     position: relative;
-  }
-  .details-head h1{
- font-size: 5vw;
-  }
-  .details-para{
-    margin-top: 10%;
-  }
-  .details-para .para span{
-    font-size: 2.5vw;
-    line-height: 2;
- 
-  }
-  .cone{
-    height: 70px;
-    width: 30%;
-    object-fit:contain ;
-    position: absolute;
-    top: 25px;
-    right: 50px;
-    transform: rotate(10deg);
-  }
-  .cone img{
-    height: 100%;
     width: 100%;
   }
+  .details-head h1{
+ font-size: 5.5vw;
+
+  }
+  .details-para{
+    width: 100%;
+    margin-top: 10%;
+
+
+ 
+
+  }
+  .details-para .para{
+    line-height: 1.5;
+  }
+  .details-para .para span{
+    font-size: 2.3vw;
+  
+ 
+ 
+  }
+
   
   .marque >.innerdiv{
     gap:2px
@@ -629,25 +636,33 @@ border-radius: 10px;
 
 .reelShow{
   height: auto;
-  width: 90%;
+  width: 95%;
   margin: auto;
   display: flex;
   flex-direction: column;
+  padding: 5vh 0vh;
 }
   .reel-heading{
     position: relative;
     width: 90%;
     margin-bottom: 20px;
+  
+ 
  
 
   }
   .reel-heading h1{
     font-size: 5vw;
   }
+  .reel-heading p{
+    font-size: 3vw;
+    color: whitesmoke;
+  }
   .reelContainer{
     padding: 0vh 0vh;
-    height: 100vh;
-   width: 100%;
+    height: 75vh;
+   width: 70%;
+   overflow: hidden;
     overflow-y: scroll; 
     position: relative;
     top: 0;
@@ -660,10 +675,9 @@ border-radius: 10px;
     -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
   }
   .reelContainer .reel{
-    padding: 0vh 0vh;
-    height: 90vh; /* 👈 each reel takes full screen */
-    width: 100%; 
-    margin: auto;
+    padding: 1vh 0vh;
+    height: 100%; /* 👈 each reel takes full screen */
+    width: 75%; 
     scroll-snap-align: start; /* 🔥 this makes it snap to top */
     transform: rotate(0);
     position: relative;
@@ -674,12 +688,13 @@ border-radius: 10px;
     scale: 1;
 
 
+
   }
 
   .reelContainer .reel video {
     overflow: hidden;
     height: 100%;
-    width: 90%;
+    width: 80%;
     object-fit: cover;
     border-radius: 20px; /* Remove any rounded corners */
   }
@@ -687,10 +702,10 @@ border-radius: 10px;
     scale: 1;
   }
   .sound{
-    right: 30px;
+    right: 50px;
   }
   .sound i{
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
 
@@ -710,7 +725,7 @@ display: block;
     display: block;
     width: 100%;
     height: auto;
-    padding: 0px;
+    padding: 10px;
    
   }
 
@@ -723,8 +738,11 @@ display: block;
 
    
   }
+  .row2 h1{
+    font-size: 7vw;
+  }
    .menu-list2 ul li a{
-   font-size: 3vw;
+   font-size: 3.3vw;
   }
   .mediaLink{
   padding: 8vw 0vw;
@@ -735,7 +753,7 @@ display: block;
     align-items: center;
   }
   .mediaLink i{
-    font-size: 5vw;
+    font-size: 6vw;
     color: #3f0e67;
   }
 
@@ -744,11 +762,142 @@ display: block;
     display: flex;
     gap: 10px;
   }
-  .para{
+  /* .para{
     color: #e7e5e8;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5vw;
+    font-size: 0vw;
+  } */
+   .paraend{
+    font-size: 2.6vw;
+    color: #3f0e67 ;
+    background-color: whitesmoke;
+   }
+}
+
+
+@media (max-width: 330px){
+
+  .logo{
   }
+  .logo img{
+    height: 11vh;
+  }
+
+.menu-list ul li a{
+  font-size: 7vw;
+}
+
+  .hero-heading{
+    margin-top: 40%;
+  }
+  .reelShow{
+    height: auto;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 0vh;
+  }
+    .reel-heading{
+      position: relative;
+      width: 90%;
+      margin-bottom: 20px;
+   
+  
+    }
+    .reel-heading h1{
+      font-size: 5.5vw;
+    }
+    .reelContainer{
+   
+      padding: 0vh 0vh;
+      height: 75vh;
+     width: 80%;
+     overflow: hidden;
+      overflow-y: scroll; 
+      position: relative;
+      top: 0;
+       left: 0%;
+      scroll-snap-type: y mandatory; /* 👈 adds snapping effect */
+      display: flex;
+      flex-direction: column;
+      scroll-behavior: smooth;
+      gap: 20px;
+      -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+    }
+    .reelContainer .reel{
+   
+      padding: 0vh 0vh;
+      height: 100%; /* 👈 each reel takes full screen */
+      width: 80%; 
+      scroll-snap-align: start; /* 🔥 this makes it snap to top */
+      transform: rotate(0);
+      position: relative;
+   
+   
+      position: relative;
+      left:0%;
+      scale: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+  
+    }
+  
+    .reelContainer .reel video {
+      overflow: hidden;
+      height: 100%;
+      width: 80%;
+      object-fit: cover;
+      border-radius: 20px; /* Remove any rounded corners */
+    }
+    .reelContainer .reel video:hover{
+      scale: 1;
+    }
+
+
+
+    .details{
+      background-color: whitesmoke;
+      padding: 1vh 5vw;
+      height: 70vh;
+    }
+    .details-head {
+      position: relative;
+      width: 100%;
+    }
+    .details-head h1{
+   font-size: 5.5vw;
+  
+    }
+    .details-para{
+      width: 100%;
+      margin-top: 5%;
+  
+  
+   
+  
+    }
+    .details-para .para{
+      line-height:1;
+    }
+    .details-para .para span{
+      font-size: 3vw;
+    
+   
+   
+    }
+ 
+    .menu-list2 ul li::after{
+      height: 12px;
+      top: 25%;
+      right: -10px;
+    }
+  
+
+ 
+
 }
