@@ -105,6 +105,7 @@ if (window.innerWidth > 768) {
     duration: 3,
     scrollTrigger: {
       trigger: ".hero-heading",
+      scroller:"#main",
       start: "0% 30%",
       end: "bottom 0%",
  
@@ -125,7 +126,7 @@ if (window.innerWidth > 768) {
      scale: 0.8,
      scrollTrigger: {
        trigger: ".hero-heading",
-    
+       scroller:"#main",
        start: "top 40%",
        end: "bottom 50%",
        scrub: true
@@ -181,7 +182,7 @@ function detailsPge(){
     ease: "power1.inOut", // smooth easing
     scrollTrigger: {
       trigger: '.details',
-      scroller: 'body',
+      scroller:"#main",
       start: 'top 90%',
       end: 'top 40%',
       scrub: 1.5,
@@ -194,7 +195,7 @@ function detailsPge(){
     stagger:.1,
     scrollTrigger:{
       trigger:'.details-para .para',
-      scroller:'body',
+      scroller:"#main",
       start:'top 50%',
       end:"top 15%",
       scrub:2
@@ -225,6 +226,7 @@ gsap.to('.reelContainer .reel',{
   ease:'linear',
   scrollTrigger:{
     trigger:".reelShow",
+    scroller:"#main",
     start:'top top',
     end:"bottom top",
     scrub:2,
@@ -302,6 +304,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
+locoMotive();
 
 
 
